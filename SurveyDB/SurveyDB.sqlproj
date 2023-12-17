@@ -132,4 +132,9 @@
     <Build Include="dbo\Tables\SurveyAnswer.sql" />
     <Build Include="dbo\Tables\AnswersInSurveys.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="SeedSurveyQuestion.sql" />
+    <None Include="SeedSurveyStatus.sql" />
+    <None Include="SeedSurveyType.sql" />
+  </ItemGroup>
 </Project>
