@@ -23,7 +23,7 @@
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
-    <TemporalHistoryRetentionEnabled>Off</TemporalHistoryRetentionEnabled>
+    <TemporalHistoryRetentionEnabled>False</TemporalHistoryRetentionEnabled>
     <IsLedgerOn>False</IsLedgerOn>
     <QueryStoreCaptureMode>All</QueryStoreCaptureMode>
     <QueryStoreDesiredState>ReadWrite</QueryStoreDesiredState>
