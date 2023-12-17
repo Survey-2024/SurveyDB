@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SurveyDB", "SurveyDB\SurveyDB.sqlproj", "{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701F9BC4-09AF-47E1-92BA-CB0F654D2D1D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7BC5E2AC-7FF2-4971-9449-04790D5E24D7}
+	EndGlobalSection
+EndGlobal
