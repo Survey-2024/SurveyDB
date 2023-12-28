@@ -33,7 +33,7 @@ steps:
     buildType: 'current'
     downloadType: 'single'
     artifactName: 'drop'
-    downloadPath: '$(System.ArtifactsDirectory)/drop/DBSurveyProject.dacpac'
+    downloadPath: '$(System.ArtifactsStagingDirectory)/drop/DBSurveyProject.dacpac'
 
 - task: SqlAzureDacpacDeployment@1
   inputs:
