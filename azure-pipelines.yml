@@ -40,7 +40,7 @@ steps:
     azureSubscription: 'cjd-Pay-as-you-go(146f2515-80c9-4a78-ae5d-452e9a3d7255)'
     AuthenticationType: 'server'
     ServerName: 'sqlserver0978.database.windows.net'
-    DacpacFile: '$(System.DefaultWorkingDirectory)/SurveyDB/bin/Release/DBSurveyProject.dacpac'
+    DacpacFile: '$(System.DefaultWorkingDirectory)/SurveyDB/bin/Release/DBSurvey.dacpac'
     DatabaseName: 'DBSurveyProject'
     SqlUsername: 'sqladmin'
     SqlPassword: 'Admin123'
