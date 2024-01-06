@@ -2,8 +2,8 @@
     [SurveyId]       INT IDENTITY (1, 1) NOT NULL,
     [SurveyTypeId]   INT NOT NULL,
     [SurveyStatusId] INT NOT NULL,
-    [CreatedDate] DATETIMEOFFSET NOT NULL, 
-    [ModifiedDate] DATETIMEOFFSET NULL, 
+    [CreatedDate] DATETIMEOFFSET NOT NULL DEFAULT SYSDATETIMEOFFSET(), 
+    [ModifiedDate] DATETIMEOFFSET NULL , 
     CONSTRAINT [PK_Survey] PRIMARY KEY CLUSTERED ([SurveyId] ASC),
     CONSTRAINT [FK_Survey_SurveyStatus] FOREIGN KEY ([SurveyStatusId]) REFERENCES [dbo].[SurveyStatus] ([SurveyStatusId]),
     CONSTRAINT [FK_Survey_SurveyType] FOREIGN KEY ([SurveyTypeId]) REFERENCES [dbo].[SurveyType] ([SurveyTypeId])
