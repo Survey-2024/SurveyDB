@@ -1,0 +1,49 @@
+# ASP.NET
+# Build and test ASP.NET projects.
+# Add steps that publish symbols, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  inputs:
+    solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+# - task: DownloadBuildArtifacts@0
+#   inputs:
+#     buildType: 'current'
+#     downloadType: 'single'
+#     artifactName: 'drop'
+#     downloadPath: '$(System.ArtifactsStagingDirectory)/drop/DBSurveyProject.dacpac'
+
+- task: SqlAzureDacpacDeployment@1
+  inputs:
+    azureSubscription: 'cjd-Pay-as-you-go(146f2515-80c9-4a78-ae5d-452e9a3d7255)'
+    AuthenticationType: 'server'
+    ServerName: 'sqlserver0978.database.windows.net'
+    DacpacFile: '$(System.DefaultWorkingDirectory)/SurveyDB/bin/Release/SurveyDB.dacpac'
+    DatabaseName: 'DBSurveyProject'
+    SqlUsername: 'sqladmin'
+    SqlPassword: 'Admin123'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    IpDetectionMethod: 'AutoDetect'
